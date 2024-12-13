@@ -24,6 +24,21 @@ public class Membre {
     public void addIncident(Incident incident){
         incidents.add(incident);
     }
+
+    @Override 
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if(!(o instanceof Membre)){
+            return false;
+        }
+        var comparedObject = (Membre) o;
+
+        return comparedObject.getIdentifiant() == this.getIdentifiant();
+
+
+    }
     
     
 }
