@@ -1,9 +1,9 @@
-package com.main.Dao;
+package com.main.Dao.impl;
 
 import java.sql.*;
 import java.util.*;
 
-import com.main.Dao.blueprints.MemberDao;
+import com.main.Dao.MemberDao;
 import com.main.Model.Incident;
 import com.main.Model.Membre;
 

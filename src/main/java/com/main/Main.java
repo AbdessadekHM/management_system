@@ -18,7 +18,7 @@ public class Main extends Application{
         FXMLLoader  fxmlLoader = new FXMLLoader(Main.class.getResource("/View/form.fxml"));
         Scene scene;
         try {
-            scene = new Scene(fxmlLoader.load());
+            scene = new Scene(fxmlLoader.load() );
             stage.setTitle("add to db");
             stage.setScene(scene);
             stage.show();

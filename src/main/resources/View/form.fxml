@@ -6,17 +6,17 @@
 <?import javafx.scene.layout.*?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="598.0" style="-fx-background-color: #E3EFE1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="598.0" style="-fx-background-color: #E3EFE1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.Controllers.FormController">
    <children>
       <Label layoutX="35.0" layoutY="51.0" text="Ajouter un nouveau membre">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="187.0" layoutY="133.0" prefHeight="25.0" prefWidth="225.0" promptText="Nom" />
-      <TextField layoutX="187.0" layoutY="204.0" prefHeight="25.0" prefWidth="225.0" promptText="Prenom" />
-      <TextField layoutX="187.0" layoutY="269.0" prefHeight="25.0" prefWidth="225.0" promptText="Email" />
-      <TextField layoutX="187.0" layoutY="334.0" prefHeight="25.0" prefWidth="225.0" promptText="Phone" />
-      <Button layoutX="469.0" layoutY="424.0" mnemonicParsing="false" text="Ajouter" />
+      <TextField fx:id="nom" layoutX="187.0" layoutY="133.0" prefHeight="25.0" prefWidth="225.0" promptText="Nom" />
+      <TextField fx:id="prenom" layoutX="187.0" layoutY="204.0" prefHeight="25.0" prefWidth="225.0" promptText="Prenom" />
+      <TextField fx:id="email" layoutX="187.0" layoutY="269.0" prefHeight="25.0" prefWidth="225.0" promptText="Email" />
+      <TextField fx:id="phone" layoutX="187.0" layoutY="334.0" prefHeight="25.0" prefWidth="225.0" promptText="Phone" />
+      <Button fx:id="ajouter" layoutX="469.0" layoutY="424.0" mnemonicParsing="false" text="Ajouter" />
    </children>
 </Pane>

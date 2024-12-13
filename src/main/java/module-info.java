@@ -4,4 +4,5 @@ module com.main {
     requires java.sql;
     requires lombok;
     exports com.main;
+    exports com.main.Controllers;
 }

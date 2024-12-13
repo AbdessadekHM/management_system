@@ -1,9 +1,9 @@
-package com.main.Dao;
+package com.main.Dao.impl;
 
 import java.sql.*;
 import java.util.Set;
 
-import com.main.Dao.blueprints.IncidentDao;
+import com.main.Dao.IncidentDao;
 import com.main.Model.Incident;
 
 public class IncidentDaoImpl implements IncidentDao {
