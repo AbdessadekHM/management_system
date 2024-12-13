@@ -19,7 +19,7 @@ public class Main extends Application{
         Scene scene;
         try {
             scene = new Scene(fxmlLoader.load() );
-            stage.setTitle("add to db");
+            stage.setTitle("Management System");
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
