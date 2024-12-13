@@ -13,10 +13,10 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="nom" layoutX="187.0" layoutY="133.0" prefHeight="25.0" prefWidth="225.0" promptText="Nom" />
+      <TextField fx:id="nom"  layoutX="187.0" layoutY="133.0" prefHeight="25.0" prefWidth="225.0" promptText="Nom" />
       <TextField fx:id="prenom" layoutX="187.0" layoutY="204.0" prefHeight="25.0" prefWidth="225.0" promptText="Prenom" />
       <TextField fx:id="email" layoutX="187.0" layoutY="269.0" prefHeight="25.0" prefWidth="225.0" promptText="Email" />
       <TextField fx:id="phone" layoutX="187.0" layoutY="334.0" prefHeight="25.0" prefWidth="225.0" promptText="Phone" />
-      <Button fx:id="ajouter" layoutX="469.0" layoutY="424.0" mnemonicParsing="false" text="Ajouter" />
+      <Button  layoutX="469.0" layoutY="424.0" mnemonicParsing="false" text="Ajouter" onAction="#onButtonClick" />
    </children>
 </Pane>

@@ -1,4 +1,4 @@
-package com.main.Dao.blueprints;
+package com.main.Dao;
 
 import java.util.Set;
 

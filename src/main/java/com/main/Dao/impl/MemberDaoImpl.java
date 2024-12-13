@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.*;
 
 import com.main.Dao.MemberDao;
+import com.main.Dao.utils.ConnectionToDB;
 import com.main.Model.Incident;
 import com.main.Model.Membre;
 
@@ -11,6 +12,10 @@ public class MemberDaoImpl implements MemberDao {
     private Connection conn;
 
     private static MemberDaoImpl instance = new MemberDaoImpl();
+
+    public MemberDaoImpl(){
+        conn = ConnectionToDB.getInstance().getConnection();
+    }
     @Override
     public List<Incident> chargetListIncidents() {
         String statement = "SELECT * FROM incidents WHERE ";
@@ -26,7 +31,6 @@ public class MemberDaoImpl implements MemberDao {
             }
             return incidents;
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             return null;
         }
@@ -34,21 +38,29 @@ public class MemberDaoImpl implements MemberDao {
 
     @Override
     public void insere(Membre m) {
-        // TODO Auto-generated method stub
-        String statement = "INSERT INTO membres(identifiant, nom, prenom, email, phone) VALUES ("+m.getIdentifiant()+","+m.getNom()+","+m.getPrenom()+","+m.getEmail()+","+m.getPhone();
-
+        System.out.println(m.getIdentifiant());
+        System.out.println(m.getNom());
+        System.out.println(m.getPrenom());
+        System.out.println(m.getEmail());
+        System.out.println(m.getPhone());
+        String statement = "INSERT INTO membres(identifiant, nom, prenom, email, phone) VALUES ("+
+         m.getIdentifiant()+","+
+        "'"+ m.getNom()+"', "+
+        "'"+ m.getPrenom()+"', "+
+        "'"+ m.getEmail()+"', "+
+        "'"+ m.getPhone()+"')";
+        System.out.println(statement);
         try {
             PreparedStatement stmt = conn.prepareStatement(statement);
             stmt.execute();
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         
 
     }
 
-    public MemberDaoImpl getInstance(){
+    public static MemberDaoImpl getInstance(){
         return instance;
     }
      
