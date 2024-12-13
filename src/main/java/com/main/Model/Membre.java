@@ -40,5 +40,10 @@ public class Membre {
 
     }
     
+    @Override
+    public int hashCode(){
+        return identifiant;
+    }
+    
     
 }
