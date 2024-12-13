@@ -13,7 +13,7 @@ public class Membre {
     
     private List<Incident> incidents = new ArrayList<>();
 
-    public Membre(int identifiant, String nom, String prenom, String email, String phone, List<Incident> incidents) {
+    public Membre(int identifiant, String nom, String prenom, String email, String phone) {
         this.identifiant = identifiant;
         this.nom = nom;
         this.prenom = prenom;

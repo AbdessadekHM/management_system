@@ -1,26 +1,26 @@
 package com.main.Model;
 
-import java.time.LocalDateTime;
-import java.util.*;
 
 import lombok.Getter;
 
 
 public class Incident {
     @Getter
-    private String reference, status;
+    private int reference;
     @Getter
-    private LocalDateTime time;
+    private String status;
+    @Getter
+    private String time;
 
     @Getter
-    private Membre membre;
+    private int membre_id;
 
 
-    public Incident(String reference, String status, LocalDateTime time, Membre membre) {
+    public Incident(int reference, String status, String time, int membre) {
         this.reference = reference;
         this.status = status;
         this.time = time;
-        this.membre = membre;
+        this.membre_id = membre;
     }
     
 }
